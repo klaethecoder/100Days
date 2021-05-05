@@ -10,3 +10,16 @@ result = (total_bill + (total_bill*tip_percent)) / total_people
 
 print(round(result,2))
 
+
+# Coding Exercise Day 2.1 
+# 🚨 Don't change the code below 👇
+two_digit_number = input("Type a two digit number: ")
+# 🚨 Don't change the code above 👆
+
+####################################
+#Write your code below this line 👇
+d1 = two_digit_number[0]
+d2 = two_digit_number[1]
+
+print(int(d1)+int(d2))
+
