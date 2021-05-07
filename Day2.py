@@ -23,3 +23,31 @@ d2 = two_digit_number[1]
 
 print(int(d1)+int(d2))
 
+
+# Day 2.2 Exercise: BMI Calculator
+# 🚨 Don't change the code below 👇
+height = input("enter your height in m: ")
+weight = input("enter your weight in kg: ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+print(type(height))
+
+print(round(float(weight)/(float(height)**2),2))
+
+# Day 2.3 Exercise: Time Left 
+
+# 🚨 Don't change the code below 👇
+age = input("What is your current age?")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+age = int(age)
+years_left = 90-age
+weeks_left = years_left*52
+months_left = years_left*12
+days_left = weeks_left*7
+
+
+print(f"Based on living to 90 Years Old: You have {days_left} days left, {weeks_left} weeks left, and {months_left} months left. ")
+
