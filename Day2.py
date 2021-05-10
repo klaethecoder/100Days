@@ -7,9 +7,10 @@ tip_percent = float(input("What percentage tip would you like to give 10, 12, or
 tip_amount = total_bill * tip_percent
 total_people = float(input("How many people to split the bill?\t"))
 
-result = (total_bill + tip_amount) / total_people
+result = round((total_bill + tip_amount) / total_people,2)
+result = "{:.2f}".format(result)
 
-print(f"Each Person should pay: {round(result,2)}")
+print(f"Each Person should pay: {result}")
 
 
 # Coding Exercise Day 2.1 
