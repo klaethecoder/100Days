@@ -2,6 +2,24 @@ import random as r
 #Day 4 Randomisation and Python Lists
 # Project: Rock, Paper, Scissors game
 
+print("Welcome to the Thunder Dome!!!")
+print("This is a game of Rock Paper Scissors")
+p1_choice = input("Choose R for Rock, S for Scissors and P for Paper\t")
+comp_choice = r.random_choice(["R", "S", "P"])
+
+if p1_choice == comp_choice:
+    print("It's a Tie")
+elif p1_choice == "R" and comp_choice == "S":
+    print("You Win!!!")
+elif p1_choice == "S" and comp_choice == "P":
+    print("You Win")
+elif p1_choice == "P" and comp_choice == "R":
+    print("You Win")
+else:
+    print("Computer Wins :( ")
+
+
+
 count = 0
 list = []
 while set(list) != {0,1,2}:
@@ -38,3 +56,25 @@ index = r.randint(0, length-1)
 
 print(f"Looks like {names[index]} is getting the bill today")
 
+
+# Day 4.3 Exercise: Treasure Map?
+
+# 🚨 Don't change the code below 👇
+row1 = ["⬜️","⬜️","⬜️"]
+row2 = ["⬜️","⬜️","⬜️"]
+row3 = ["⬜️","⬜️","⬜️"]
+map = [row1, row2, row3]
+print(f"{row1}\n{row2}\n{row3}")
+position = input("Where do you want to put the treasure? ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this row 👇
+col = int(position[0]) - 1
+row = int(position[1])-1
+
+map[row][col] = "X"
+
+#Write your code above this row 👆
+
+# 🚨 Don't change the code below 👇
+print(f"{row1}\n{row2}\n{row3}")
