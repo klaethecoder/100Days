@@ -2,23 +2,70 @@ import random as r
 #Day 4 Randomisation and Python Lists
 # Project: Rock, Paper, Scissors game
 
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
 print("Welcome to the Thunder Dome!!!")
 print("This is a game of Rock Paper Scissors")
 p1_choice = input("Choose R for Rock, S for Scissors and P for Paper\t")
-comp_choice = r.random_choice(["R", "S", "P"])
+comp_choice = r.choice(["R", "S", "P"])
 
 if p1_choice == comp_choice:
-    print("It's a Tie")
+    print("It's a Tie\n")
+    if p1_choice == "R":
+        print("You both picked:\n" + rock)
+    elif p1_choice == "P":
+        print("You both picked:\n" + paper)
+    elif p1_choice == "S":
+        print("You both picked:\n" + scissors)
 elif p1_choice == "R" and comp_choice == "S":
-    print("You Win!!!")
+    print("You Win!!!\n")
+    print("Player 1's Choice:\n" + rock)
+    print("Computer's Choice:\n" + scissors)
+
 elif p1_choice == "S" and comp_choice == "P":
-    print("You Win")
+    print("You Win!!!\n")
+    print("Player 1's Choice:\n" + scissors)
+    print("Computer's Choice:\n" + paper)
 elif p1_choice == "P" and comp_choice == "R":
-    print("You Win")
+    print("You Win!!!\n")
+    print("Player 1's Choice:\n" + paper)
+    print("Computer's Choice:\n" + rock)
 else:
-    print("Computer Wins :( ")
-
-
+    print("Computer Wins :( \n")
+    if comp_choice == "R":
+        print("Computer's Choice:\n" + rock)
+        print("Player 1's Choice:\n" + scissors)
+    elif comp_choice == "S":
+        print("Computer's Choice:\n" + scissors)
+        print("Player 1's Choice:\n" + paper)
+    elif comp_choice == "P":
+        print("Computer's Choice:\n" + paper)
+        print("Player 1's Choice:\n" + rock)
 
 count = 0
 list = []
@@ -78,3 +125,4 @@ map[row][col] = "X"
 
 # 🚨 Don't change the code below 👇
 print(f"{row1}\n{row2}\n{row3}")
+
