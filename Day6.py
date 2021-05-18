@@ -8,28 +8,15 @@ def turnRight():
     turn_left()
     turn_left()
     turn_left()
-def goForIt():
-    move()
-    turn_left()
-    move()
-    turnRight()
-def connect():
-    move()
-    turnRight()
-    move()
-    turn_left()
-   
 def hurdle():
-    goForIt()
+    move()
+    turn_left()
+    move()
+    turnRight()
     move()
     turnRight()
     move()
     turn_left()
-    goForIt()
+for steps in range(6):    
+    hurdle()
     
-hurdle()
-connect()
-hurdle()
-connect()
-hurdle()
-connect()
