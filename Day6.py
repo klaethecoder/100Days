@@ -19,4 +19,29 @@ def hurdle():
     turn_left()
 for steps in range(6):    
     hurdle()
+# for the Hurdle 2 example in Reeborg's World
+while True: 
+        hurdle()
+        if at_goal():
+            break
+
+# for the Hurdle 3 example
+def turnRight():
+    turn_left()
+    turn_left()
+    turn_left()
+def hurdle():
+    turn_left()
+    move()
+    turnRight()
+    move()
+    turnRight()
+    move()
+    turn_left()
     
+
+while not at_goal(): 
+    if wall_in_front():
+       hurdle()
+    elif front_is_clear():
+        move()
