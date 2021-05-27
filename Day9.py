@@ -31,4 +31,8 @@ while not done:
         done = True
     else:
         print("\033[H\033[J") 
+highest_bid = max(namesAndBids.values())
+highest_name = max(namesAndBids, key=namesAndBids.get)
 
+print("\033[H\033[J") 
+print(f"The winner of the action is {highest_name} with a bid of ${highest_bid}!!!")
