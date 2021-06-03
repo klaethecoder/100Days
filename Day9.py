@@ -55,8 +55,42 @@ student_grades = {}
 
 # TODO-2: Write your code below to add the grades to student_grades.👇
 for student in student_scores:
-    student_grades[student] = student_scores[student]
-
+  if student_scores[student] > 90:
+    student_grades[student] = "Outstanding"
+  elif student_scores[student] > 80:
+    student_grades[student] = "Exceeds Expectation"
+  elif student_scores[student] > 70:
+    student_grades[student] = "Acceptable"
+  else:
+    student_grades[student] = "Fail"
 
 # 🚨 Don't change the code below 👇
 print(student_grades)
+
+# Day 9.2 Excercise: Nesting a dicitionaries in lists. 
+
+travel_log = [
+{
+  "country": "France",
+  "visits": 12,
+  "cities": ["Paris", "Lille", "Dijon"]
+},
+{
+  "country": "Germany",
+  "visits": 5,
+  "cities": ["Berlin", "Hamburg", "Stuttgart"]
+},
+]
+#🚨 Do NOT change the code above
+
+#TODO: Write the function that will allow new countries
+#to be added to the travel_log. 👇
+def add_new_country(country, visits, cities):
+  travel_log.append({"country": country, "visits": visits, "cities": cities})
+
+
+
+
+#🚨 Do not change the code below
+add_new_country("Russia", 2, ["Moscow", "Saint Petersburg"])
+print(travel_log)
